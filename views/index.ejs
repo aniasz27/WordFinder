@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word finder</title>
+
+    <script src="javascripts/website.js" defer></script>
+    <script src="javascripts/messages.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+<body>
+    <h1>Word finder</h1>
+    <form action="javascript:void(0);">
+        <ul>
+            <li>
+                <label for="start">Starts:</label>
+                <input type="text" id="start" name="user_start">
+            </li>
+            <li>
+                <label for="end">Ends:</label>
+                <input type="text" id="end" name="user_end">
+            </li>
+            <li>
+                <label for="pos">Position:</label>
+                <input type="text" id="pos" name="user_pos">
+            </li>
+            <li>
+                <label for="length">Length:</label>
+                <input type="number" id="length" name="user_length">
+            </li>
+            <li>
+                <button type="submit" onclick="search()">Search</button>
+            </li>
+        </ul>
+    </form>
+    <h2>Word list</h2>
+    <div id="container">
+      <ol id="words">
+        
+      </ol>
+    </div>
+</body>
+</html>
