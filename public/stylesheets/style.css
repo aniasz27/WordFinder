@@ -1,9 +1,143 @@
-body {
-  padding: 50px;
+body
+{
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background: gray;
 }
 
-a {
-  color: #00B7FF;
+#container
+{
+  background-color: #C8C6C6;
+  margin: auto;
+  width: 80vw;
+}
+
+form
+{
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #9D9D9D;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+#nav
+{
+  position: sticky;
+  top: 0;
+  background-color: #C8C6C6;
+}
+
+input
+{
+  height: 40px;
+  width: calc(100% - 30px);
+  margin: auto;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.top
+{
+  width: 12vw;
+}
+
+.bottom
+{
+  width: 10vw;
+}
+
+#lingth
+{
+  width: 6vw;
+}
+
+ul
+{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+}
+
+ul > li
+{
+  padding-top: 10px;
+}
+
+label
+{
+  font-weight: 700;
+  display: block;
+  padding-bottom: 5px;
+}
+
+.click
+{
+  margin: auto;
+  width: 15vw;
+}
+
+h1
+{
+  letter-spacing: 5px;
+  font-size: xx-large;
+  color: white;
+  background-color: black;
+  padding: 30px;
+}
+
+button
+{
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 40px 10px 40px;
+  border-radius: 10px;
+  background-color: #343A40;
+  color: white;
+  width: 70%
+}
+
+button:hover
+{
+  color: black;
+  cursor: pointer;
+}
+
+h2
+{
+  font-style: italic;
+  font-size: x-large;
+  padding: 20px;
+  background-color: dimgray;
+}
+
+ol
+{
+  padding: 0px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+ol > li
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed black;
+}
+
+#counter
+{
+  font-size: 16px;
+  width: 10vw;
+  background-color: darkgray;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }

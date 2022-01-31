@@ -14,35 +14,48 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 </head>
 <body>
-    <h1>Word finder</h1>
-    <form action="javascript:void(0);">
-        <ul>
-            <li>
-                <label for="start">Starts:</label>
-                <input type="text" id="start" name="user_start">
-            </li>
-            <li>
-                <label for="end">Ends:</label>
-                <input type="text" id="end" name="user_end">
-            </li>
-            <li>
-                <label for="pos">Position:</label>
-                <input type="text" id="pos" name="user_pos">
-            </li>
-            <li>
-                <label for="length">Length:</label>
-                <input type="number" id="length" name="user_length">
-            </li>
-            <li>
-                <button type="submit" onclick="search()">Search</button>
-            </li>
-        </ul>
-    </form>
-    <h2>Word list</h2>
     <div id="container">
-      <ol id="words">
-        
-      </ol>
+        <h1>WORD FINDER</h1>
+        <div id="nav">
+            <form action="javascript:void(0);">
+                <ul>
+                    <li class="top">
+                        <label for="start">Starts:</label>
+                        <input type="text" id="start" name="user_start">
+                    </li>
+                    <li id="lingth">
+                        <label for="length">Length:</label>
+                        <input type="number" id="length" name="user_length">
+                    </li>
+                    <li class="top">
+                        <label for="end">Ends:</label>
+                        <input type="text" id="end" name="user_end">
+                    </li>
+                    <li class="bottom">
+                        <label for="con">Contains:</label>
+                        <input type="text" id="con" name="user_con">
+                    </li>
+                    <li class="bottom">
+                        <label for="not">Doesn't contain:</label>
+                        <input type="text" id="not" name="user_not">
+                    </li>
+                    <li class="bottom">
+                        <label for="pos">Position:</label>
+                        <input type="text" id="pos" name="user_pos">
+                    </li>
+                    <li class="click">
+                        <button type="submit" onclick="resetInput()">RESET</button>
+                    </li>
+                    <li class="click">
+                        <button type="submit" onclick="search()">SEARCH</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <h2>Word list</h2>
+        <div id="counter"></div>
+        <ol id="words">
+        </ol>
     </div>
 </body>
 </html>
