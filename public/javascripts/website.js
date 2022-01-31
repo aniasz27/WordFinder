@@ -31,12 +31,12 @@ function showWords(){
 }
 
 function search(){
-    let start = document.getElementById("start").value;
-    let end = document.getElementById("end").value;
-    let con = document.getElementById("con").value;
-    let not = document.getElementById("not").value;
+    let start = document.getElementById("start").value.toLowerCase();
+    let end = document.getElementById("end").value.toLowerCase();
+    let con = document.getElementById("con").value.toLowerCase();
+    let not = document.getElementById("not").value.toLowerCase();
     let length = document.getElementById("length").value;
-    let pos = document.getElementById("pos").value;
+    let pos = document.getElementById("pos").value.toLowerCase();
     reset();
     if(start !== ''){
         let n = start.length;
@@ -91,4 +91,6 @@ function resetInput() {
     document.getElementById("not").value = '';
     document.getElementById("length").value = '';
     document.getElementById("pos").value = '';
+    reset();
+    showWords();
 }
