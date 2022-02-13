@@ -46,9 +46,14 @@ input
   width: 12vw;
 }
 
+.middle
+{
+  width: 15vw;
+}
+
 .bottom
 {
-  width: 10vw;
+  width: 15vw;
 }
 
 #lingth

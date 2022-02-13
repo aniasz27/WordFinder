@@ -37,6 +37,7 @@ function search(){
     let not = document.getElementById("not").value.toLowerCase();
     let length = document.getElementById("length").value;
     let pos = document.getElementById("pos").value.toLowerCase();
+    let posn = document.getElementById("posn").value.toLowerCase();
     reset();
     if(start !== ''){
         let n = start.length;
@@ -63,6 +64,9 @@ function search(){
     if(pos !== ''){
         words = words.filter(word => matchWord(word, pos));
     }
+    if(posn !== ''){
+        words = words.filter(word => notMatchWord(word, posn));
+    }
     showWords();
 }
 
@@ -70,6 +74,15 @@ function matchWord(word, pattern){
 	let ret = true
 	pattern.split("").forEach((c, i) => {
 		if (c != "_" && word[i] != c)
+			ret = false
+	})
+	return ret
+}
+
+function notMatchWord(word, pattern){
+	let ret = true
+	pattern.split("").forEach((c, i) => {
+		if (c != "_" && word[i] == c)
 			ret = false
 	})
 	return ret
@@ -91,6 +104,7 @@ function resetInput() {
     document.getElementById("not").value = '';
     document.getElementById("length").value = '';
     document.getElementById("pos").value = '';
+    document.getElementById("posn").value = '';
     reset();
     showWords();
 }
