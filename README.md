@@ -13,4 +13,4 @@ npm start
 ```
 
 Access the website at http://localhost:3000/ in the browser.
-Now search for the word among the approximately 60 000 words in the database!
+Now search for the word among approximately 70 000 words in the database!
