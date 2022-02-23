@@ -19,6 +19,13 @@ ws.addEventListener("message", msg =>{
     }
 })
 
+document.onkeydown = function(e){
+    if(e.code == 'Enter'){
+        search();
+        e.preventDefault()
+    }
+}
+
 function showWords(){
 
     for(let word of words){
