@@ -202,11 +202,93 @@ ol > li
 #counter
 {
 	font-size: 16px;
-	width: 10vw;
+	width: 10%;
 	background-color: #899dcc;
 	margin: auto;
 	padding: 10px;
 	border-radius: 0.5em;
 	font-weight: 700;
 	margin-bottom: 20px;
+}
+
+@media (max-width: 1200px)
+{
+	form
+	{
+		width: 60%;
+	}
+
+	h1
+	{
+		width: 60%;
+	}
+
+	h2
+	{
+		width: 50%;
+	}
+
+	#counter
+	{
+		width: 20%;
+	}
+}
+
+
+@media (max-width: 768px)
+{
+	form
+	{
+		width: 80%;
+	}
+}
+
+@media (max-width: 576px)
+{
+	form
+	{
+		width: 80%;
+	}
+	
+	ul li
+	{
+		width: 70%;
+		position: relative;
+		padding-top: 10px;
+	}
+
+	.thirty
+	{
+		width: 70%;
+	}
+
+	ul li:nth-of-type(2)
+	{
+		width: 70%;
+	}
+
+	nav
+	{
+		position: static;
+	}
+
+	button
+	{
+		width: 70%;
+	}
+
+	#click
+	{
+		display: block;
+	}
+
+	ol
+	{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	#counter
+	{
+		width: 40%;
+	}
 }
