@@ -1,65 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word finder</title>
 
-    <script src="javascripts/website.js" defer></script>
-    <script src="javascripts/messages.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Word finder</title>
+
+	<script src="javascripts/website.js" defer></script>
+	<script src="javascripts/messages.js" defer></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-    <div id="container">
-        <h1>WORD FINDER</h1>
-        <div id="nav">
-            <form action="javascript:void(0);">
-                <ul>
-                    <li class="top">
-                        <label for="start">Starts:</label>
-                        <input type="text" id="start" name="user_start">
-                    </li>
-                    <li id="lingth">
-                        <label for="length">Length:</label>
-                        <input type="number" id="length" name="user_length">
-                    </li>
-                    <li class="top">
-                        <label for="end">Ends:</label>
-                        <input type="text" id="end" name="user_end">
-                    </li>
-                    <li class="middle">
-                        <label for="con">Contains:</label>
-                        <input type="text" id="con" name="user_con">
-                    </li>
-                    <li class="middle">
-                        <label for="not">Doesn't contain:</label>
-                        <input type="text" id="not" name="user_not">
-                    </li>
-                    <li class="bottom">
-                        <label for="pos">Position:</label>
-                        <input type="text" id="pos" name="user_pos">
-                    </li>
-                    <li class="bottom">
-                        <label for="posn">Not position:</label>
-                        <input type="text" id="posn" name="user_posn">
-                    </li>
-                    <li class="click">
-                        <button type="submit" onclick="resetInput()">RESET</button>
-                    </li>
-                    <li class="click">
-                        <button type="submit" onclick="search()">SEARCH</button>
-                    </li>
-                </ul>
-            </form>
-        </div>
-        <h2>Word list</h2>
-        <div id="counter"></div>
-        <ol id="words">
-        </ol>
-    </div>
+	<h1>Word finder</h1>
+	<nav>
+		<form action="javascript:void(0);">
+			<ul>
+				<li class="thirty">
+					<label for="start">Starts with:</i></label>
+					<i class="fa-solid fa-question"></i>
+					<div class="help">Select the beginning of the word</div>
+					<input type="text" id="start">
+				</li>
+				<li>
+					<label for="length">Length:</label>
+					<i class="fa-solid fa-question"></i>
+					<div class="help">Select word length</div>
+					<input type="number" id="length" min="1">
+				</li>
+				<li class="thirty">
+					<label for="end">Ends with:</label>
+					<i class="fa-solid fa-question"></i>
+					<div class="help">Select the end of the word</div>
+					<input type="text" id="end">
+				</li>
+				<li class="thirty">
+					<label for="con">Contains:</label>
+					<i class="fa-solid fa-question"></i>
+					<div class="help">Select the letters which the word contains</div>
+					<input type="text" id="con">
+				</li>
+				<li class="thirty">
+					<label for="rep">Doesn't repeat:</label>
+					<i class="fa-solid fa-question"></i>
+					<div class="help">Select the letters which occur only once in the word</div>
+					<input type="text" id="rep">
+				</li>
+				<li class="thirty">
+					<label for="not">Doesn't contain:</label>
+					<i class="fa-solid fa-question"></i>
+					<div class="help">Select the letters which the word doesn't contain</div>
+					<input type="text" id="not">
+				</li>
+				<li>
+					<label for="pos">Position:</label>
+					<i class="fa-solid fa-question"></i>
+					<div class="help">Select letters in the specified position (counting from the first letter). Use '_' as a blank space</div>
+					<input type="text" id="pos">
+				</li>
+				<li>
+					<label for="posn0">Not position:</label>
+					<i class="fa-solid fa-question"></i>
+					<div class="help">Select letters that are not in the specified position (counting from the first letter). Use '_' as a blank space</div>
+					<i class="fa-solid fa-plus" onclick="addField()"></i>
+					<input type="text" id="posn0" class="notPos">
+				</li>
+			</ul>
+			<div id="click">
+				<button type="submit" onclick="resetInput()">Reset</button>
+				<button type="submit" onclick="search()">Search</button>
+			</div>
+		</form>
+	</nav>
+	<main>
+		<h2>Word list</h2>
+		<div id="counter"></div>
+		<ol id="words">
+		</ol>
+	</main>
 </body>
+
 </html>

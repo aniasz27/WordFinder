@@ -1,149 +1,212 @@
-body
+html
 {
-  font-size: 14px;
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  background: gray;
+	background-color: #edf2fb;
 }
 
-#container
+body
 {
-  background-color: #C8C6C6;
-  margin: auto;
-  width: 80vw;
-  padding-bottom: 10px;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	background-color: #e2eafc;
+	margin: auto;
+	width: 80%;
+	padding-bottom: 10px;
 }
 
 form
 {
-  width: 30vw;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #9D9D9D;
-  padding: 10px;
-  border-radius: 30px;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #899dcc;
+	padding: 20px;
+	border-radius: 10px 100px / 120px;
 }
 
-#nav
+.fa-plus
 {
-  position: sticky;
-  top: 0;
-  background-color: #C8C6C6;
+	position: absolute;
+	top: 60%;
+	right: 10%;
+	font-size: large;
+	font-weight: 900;
+}
+
+.fa-plus:hover
+{
+	cursor: pointer;
+	color: #899dcc;
+}
+
+.fa-question
+{
+	position: absolute;
+	right: 5%;
+	top: 13%;
+	font-size: large;
+}
+
+.fa-question:hover
+{
+	cursor: pointer;
+	color: #677699;
+}
+
+.help
+{
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	background-color: #e2eafc;
+	width: 60%;
+	border: 2px solid #677699;
+	border-radius: 1em;
+	bottom: 100%;
+	right: 0;
+	padding: 10px;
+	transition: all 0.8s ease-in;
+}
+
+.fa-question:hover + .help
+{
+	visibility: visible;
+	opacity: 1;
+}
+
+nav
+{
+	position: sticky;
+	top: 0;
 }
 
 input
 {
-  height: 40px;
-  width: calc(100% - 30px);
-  margin: auto;
-  font-size: 16px;
-  border-radius: 5px;
-  padding-left: 10px;
+	height: 40px;
+	width: calc(100% - 30px);
+	margin: auto;
+	font-size: 16px;
+	border-radius: 0.5em;
+	padding-left: 10px;
+	border: 1px solid #677699;
+	background-color: #e2eafc;
 }
 
-.top
+ul li
 {
-  width: 12vw;
+	width: 40%;
+	position: relative;
+	padding-top: 10px;
 }
 
-.middle
+.thirty
 {
-  width: 15vw;
+	width: 30%;
 }
 
-.bottom
+ul li:nth-of-type(2)
 {
-  width: 15vw;
-}
-
-#lingth
-{
-  width: 6vw;
+	width: 20%;
 }
 
 ul
 {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0px;
-}
-
-ul > li
-{
-  padding-top: 10px;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 0px;
+	margin-top: 0px;
 }
 
 label
 {
-  font-weight: 700;
-  display: block;
-  padding-bottom: 5px;
+	font-weight: 700;
+	font-size: medium;
+	display: block;
+	padding-bottom: 5px;
 }
 
-.click
+#click
 {
-  margin: auto;
-  width: 15vw;
+	display: flex;
+	justify-content: space-evenly;
 }
 
 h1
 {
-  letter-spacing: 5px;
-  font-size: xx-large;
-  color: white;
-  background-color: black;
-  padding: 30px;
+	letter-spacing: 5px;
+	font-size: xx-large;
+	color: #677699;
+	padding: 30px;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: 5px solid #677699;
+	text-transform: uppercase;
+	letter-spacing: 15px;
 }
 
 button
 {
-  font-size: 18px;
-  font-weight: 700;
-  padding: 10px 40px 10px 40px;
-  border-radius: 10px;
-  background-color: #343A40;
-  color: white;
-  width: 70%
+	margin: auto;
+	width: 30%;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-top: 5px;
+	padding: 10px 20px;
+	border-radius: 0.8em;
+	background-color: #677699;
+	color: #e2eafc;
+	text-align: center;
+	border: 1px solid #677699;
+	transition: all 0.5s;
 }
 
 button:hover
 {
-  color: black;
-  cursor: pointer;
+	color: black;
+	cursor: pointer;
+	transform: translateY(-0.25em);
 }
 
 h2
 {
-  font-style: italic;
-  font-size: x-large;
-  padding: 20px;
-  background-color: dimgray;
+	font-style: italic;
+	font-size: x-large;
+	color: #677699;
+	padding: 20px;
+	border-bottom: 3px dashed #677699;
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	letter-spacing: 5px;
 }
 
 ol
 {
-  padding: 0px;
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+	padding: 0px;
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 }
 
 ol > li
 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px dashed black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed black;
 }
 
 #counter
 {
-  font-size: 16px;
-  width: 10vw;
-  background-color: darkgray;
-  margin: auto;
-  padding: 10px;
-  border-radius: 5px;
-  font-weight: 700;
-  margin-bottom: 20px;
+	font-size: 16px;
+	width: 10vw;
+	background-color: #899dcc;
+	margin: auto;
+	padding: 10px;
+	border-radius: 0.5em;
+	font-weight: 700;
+	margin-bottom: 20px;
 }
