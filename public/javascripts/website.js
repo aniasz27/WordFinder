@@ -48,34 +48,34 @@ function search() {
 	let pos = document.getElementById("pos").value.toLowerCase();
 	let posn = document.querySelectorAll(".notPos");
 	reset();
-	if (start !== '') {
+	if (start) {
 		let n = start.length;
 		words = words.filter(word => word.substring(0, n) === start);
 	}
-	if (length !== '') {
+	if (length) {
 		length = parseInt(length);
 		words = words.filter(word => word.length === length);
 	}
-	if (end !== '') {
+	if (end) {
 		let n = end.length;
 		words = words.filter(word => word.substring(word.length - n) === end);
 	}
-	if (con !== '') {
+	if (con) {
 		for (i = 0; i < con.length; i++) {
 			words = words.filter(word => word.includes(con.charAt(i)));
 		}
 	}
-	if (rep !== '') {
+	if (rep) {
 		for (i = 0; i < rep.length; i++) {
 			words = words.filter(word => dontRepeat(word, word.charAt(i)));
 		}
 	}
-	if (not !== '') {
+	if (not) {
 		for (i = 0; i < not.length; i++) {
 			words = words.filter(word => !word.includes(not.charAt(i)));
 		}
 	}
-	if (pos !== '') {
+	if (pos) {
 		words = words.filter(word => matchWord(word, pos));
 	}
 	for (i = 0; i <= countNot; i++) {
