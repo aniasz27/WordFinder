@@ -67,7 +67,7 @@ function search() {
 	}
 	if (rep) {
 		for (i = 0; i < rep.length; i++) {
-			words = words.filter(word => dontRepeat(word, word.charAt(i)));
+			words = words.filter(word => dontRepeat(word, rep.charAt(i)));
 		}
 	}
 	if (not) {
@@ -88,7 +88,7 @@ function search() {
 }
 
 function dontRepeat(word, letter) {
-	return word.split(letter).length-1 === 1;
+	return word.split(letter).length <= 2;
 }
 
 function matchWord(word, pattern) {
