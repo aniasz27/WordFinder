@@ -88,7 +88,7 @@ function search() {
 }
 
 function dontRepeat(word, letter) {
-	return word.split(letter).length <= 2;
+	return word.split(letter).length-1 === 1;
 }
 
 function matchWord(word, pattern) {
