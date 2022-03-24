@@ -1,5 +1,6 @@
 const list = document.querySelector("#words");
 const counter = document.getElementById("counter");
+let form = document.querySelector("form");
 let words = [];
 let copy = [];
 let countNot = 0;
@@ -26,6 +27,11 @@ document.onkeydown = function (e) {
 		e.preventDefault()
 	}
 }
+
+form.addEventListener("submit", function(e) {
+	e.preventDefault();
+	search();
+})
 
 function showWords() {
 
@@ -120,17 +126,7 @@ function reset() {
 
 function resetInput() {
 	let form = document.querySelector("ul");
-	document.getElementById("start").value = '';
-	document.getElementById("end").value = '';
-	document.getElementById("con").value = '';
-	document.getElementById("rep").value = '';
-	document.getElementById("not").value = '';
-	document.getElementById("length").value = '';
-	document.getElementById("pos").value = '';
 	let posn = document.querySelectorAll(".notPos");
-	for (i = 0; i <= countNot; i++) {
-		posn[i].value = '';
-	}
 	while (countNot > 0) {
 		form.removeChild(form.lastChild);
 		countNot--;
